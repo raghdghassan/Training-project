@@ -1,7 +1,7 @@
 /**
  * 
  */
-package accessLists;
+package modelObjects;
 
 import java.util.List;
 

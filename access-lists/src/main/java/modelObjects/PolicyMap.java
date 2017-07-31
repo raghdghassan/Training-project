@@ -1,4 +1,4 @@
-package accessLists;
+package modelObjects;
 
 public class PolicyMap {
 

@@ -1,4 +1,4 @@
-package accessLists;
+package modelObjects;
 
 public enum Direction {
 

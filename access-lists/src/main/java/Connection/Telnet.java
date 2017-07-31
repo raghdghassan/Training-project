@@ -5,10 +5,11 @@ import java.net.UnknownHostException;
 import java.io.*;
 import java.util.*;
 
-public class Telnet {
+public class Telnet extends Connection {
 	Socket socket;
 
 	public Telnet(String server, int port) throws UnknownHostException, IOException {
+		super(server,port);
 
 		final String FILENAME = "C:\\Users\\exalt\\eclipse-workspace\\Training\\day10\\filename.txt";
 		BufferedWriter bw = null;
