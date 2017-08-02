@@ -19,8 +19,6 @@ public class Telnet extends Connection {
 		BufferedReader stdIn = null;
 		String command = null;
 		try {
-			PrintStream myConsole = new PrintStream(new File("output.txt"));
-			System.setOut(myConsole);
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream())); //device log
 			socket.setSoTimeout(20000);
 			out = new PrintWriter(socket.getOutputStream(), true);
@@ -30,48 +28,35 @@ public class Telnet extends Connection {
 			stdIn = new BufferedReader(new InputStreamReader(System.in));
 			while (!(command = in.readLine()).contains("User")) {
 				System.out.println(command);
-				myConsole.print(command);
 			}
 			System.out.println(command);
-			myConsole.print(command);
 			System.out.print("Password : ");
-			myConsole.print("Password : ");
 			out.println(stdIn.readLine());
-			myConsole.print(stdIn.readLine());
 			command = in.readLine();
 			System.out.print("Command : ");
-			myConsole.print("Command : ");
 			out.println(stdIn.readLine());
-			myConsole.print(stdIn.readLine());
 			command = in.readLine();
 			System.out.println(command = in.readLine());
-			myConsole.print(command = in.readLine());
 			if (command.contains(">")) {
 				System.out.print("Password : ");
-				myConsole.print("Password : ");
 				out.println(stdIn.readLine());
-				myConsole.print(stdIn.readLine());
 				command = in.readLine();
 				while (true) {
 					out.println("\n");
 					if ((command = in.readLine()).contains("#")) {
 						System.out.print(command);
-						myConsole.print(command);
 						out.println(stdIn.readLine());
-						myConsole.print(stdIn.readLine());
 					}
 					while (!(command = in.readLine()).equals("end") && !command.contains("#"))
-						{System.out.println(command);
-						myConsole.print(command);
-						}
+						System.out.println(command);
 					System.out.println(command);
-					myConsole.print(command);
 					command = in.readLine();
 					
 					
 				}
 			}
-			
+		/*	System.setOut(new PrintStream(new FileOutputStream("output.txt")));
+			System.out.println("This is test output");*/
 			
 		} catch (Exception e) {
 			System.exit(1);
