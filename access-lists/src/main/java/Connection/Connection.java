@@ -1,5 +1,7 @@
 package Connection;
 
+import java.io.IOException;
+
 public class Connection {
 	private String server;
 	private int port;
@@ -35,6 +37,10 @@ public class Connection {
 	 */
 	public void setPort(int port) {
 		this.port = port;
+	}
+	public void exec(String ip) throws IOException
+	{
+		
 	}
 
 }

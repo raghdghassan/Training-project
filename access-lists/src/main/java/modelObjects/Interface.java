@@ -12,8 +12,8 @@ import java.util.List;
 public class Interface {
 
 	private String name;
-	List<PolicyMap> policyMap;
-	private String number;
+	private List<PolicyMap> policyMap;
+	private List<AccessList> accessList;
 
 	public Interface() {
 		super();
@@ -28,7 +28,6 @@ public class Interface {
 		super();
 		this.name = name;
 		this.policyMap = policyMap;
-		this.number = number;
 	}
 
 	/**
@@ -62,18 +61,18 @@ public class Interface {
 	}
 
 	/**
-	 * @return the number
+	 * @return the accessList
 	 */
-	public String getNumber() {
-		return number;
+	public List<AccessList> getAccessList() {
+		return accessList;
 	}
 
 	/**
-	 * @param number
-	 *            the number to set
+	 * @param accessList
+	 *            the accessList to set
 	 */
-	public void setNumber(String number) {
-		this.number = number;
+	public void setAccessList(List<AccessList> accessList) {
+		this.accessList = accessList;
 	}
 
 }
