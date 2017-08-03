@@ -1,0 +1,3 @@
+ConnectionTest\SnmpTest.class
+ConnectionTest\SshTest.class
+ConnectionTest\TelnetTest.class

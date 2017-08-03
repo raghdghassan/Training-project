@@ -18,28 +18,20 @@ public class Telnet implements Connection {
 		
 		
 
-		BufferedReader in = null;
+		BufferedReader in = null; // device dialog
 		socket = new Socket(server, port);
-		PrintWriter out = null;
-		BufferedReader stdIn = null;
+		PrintWriter out = null; // device output
+		BufferedReader stdIn = null;  // user input commands
 		String command = null;
+	
+		//String[]  dialog = new String[]{};
 		
-	/*	
-		try {telnet.connect(server, port);
-		telnet.setSoTimeout(15000);
-		
-		} catch (Exception e) {
-			throw new IllegalArgumentException("  X_X sorry fails to connect x_x");
-		}
-		*/
-		//createInOutStream();
 		try {
-			in = new BufferedReader(new InputStreamReader(socket.getInputStream())); //device log
 			socket.setSoTimeout(20000);
 			out = new PrintWriter(socket.getOutputStream(), true);
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			command = in.readLine();
-			command = in.readLine();
+		//	command = in.readLine();
+		//	command = in.readLine();
 			stdIn = new BufferedReader(new InputStreamReader(System.in));
 			while (!(command = in.readLine()).contains("User")) {
 				System.out.println(command);

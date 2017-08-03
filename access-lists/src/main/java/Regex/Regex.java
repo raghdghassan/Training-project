@@ -10,14 +10,14 @@ import Connection.Telnet;
 
 public class Regex {
 
-	public static void main(String[] args) throws IOException {
+	//public static void main(String[] args) throws IOException {
 		
-		Connection telnet = new Telnet("10.63.10.206", 23);
-		Connection snmp = new Snmp("10.63.10.206", 23);
-		Connection ssh = new Ssh("10.63.10.206", 23);
+	//	Connection telnet = new Telnet("10.63.10.206", 23);
+	//	Connection snmp = new Snmp("10.63.10.206", 23);
+	//	Connection ssh = new Ssh("10.63.10.206", 23);
 		//ssh.exec("10.63.10.206");
 		
 
-	}
+//	}
 
 }
