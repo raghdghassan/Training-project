@@ -1,8 +1,9 @@
-accessLists\Direction.class
-accessLists\Interface.class
+modelObjects\Interface.class
+modelObjects\AccessList.class
 Connection\Snmp.class
-accessLists\PolicyMap.class
+modelObjects\PolicyMap.class
+Connection\Connection.class
 Regex\Regex.class
-accessLists\AccessList.class
 Connection\Ssh.class
 Connection\Telnet.class
+modelObjects\Direction.class

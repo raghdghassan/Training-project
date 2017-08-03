@@ -1,9 +1,9 @@
 package Connection;
 
-public class Ssh extends Connection {
+public class Ssh implements Connection {
 
 	public Ssh(String server, int port) {
-		super(server, port);
+
 	}
 	
 

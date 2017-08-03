@@ -2,15 +2,20 @@ package Connection;
 
 import java.net.Socket;
 import java.net.UnknownHostException;
+
+import org.apache.commons.net.telnet.TelnetClient;
+
 import java.io.*;
 
-public class Telnet extends Connection {
-	Socket socket;
-	
+public class Telnet implements Connection {
+	private Socket socket;
+	private InputStream in;
+	private PrintStream out;
+	private TelnetClient telnet;
 
 	public Telnet(String server, int port) throws UnknownHostException, IOException {
 		
-		super(server, port);
+		
 		
 
 		BufferedReader in = null;
@@ -18,6 +23,16 @@ public class Telnet extends Connection {
 		PrintWriter out = null;
 		BufferedReader stdIn = null;
 		String command = null;
+		
+	/*	
+		try {telnet.connect(server, port);
+		telnet.setSoTimeout(15000);
+		
+		} catch (Exception e) {
+			throw new IllegalArgumentException("  X_X sorry fails to connect x_x");
+		}
+		*/
+		//createInOutStream();
 		try {
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream())); //device log
 			socket.setSoTimeout(20000);
@@ -66,6 +81,9 @@ public class Telnet extends Connection {
 		// stdIn.close();
 		// ClientSocket.close();
 
+	//}
+		
 	}
 
 }
+	
