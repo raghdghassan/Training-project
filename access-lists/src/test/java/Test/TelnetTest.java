@@ -1,4 +1,4 @@
-package ConnectionTest;
+package Test;
 
 import java.io.IOException;
 import java.net.UnknownHostException;

@@ -1,4 +1,4 @@
-package ConnectionTest;
+package Test;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -6,8 +6,8 @@ import java.net.UnknownHostException;
 import Connection.*;
 import junit.framework.TestCase;
 
-public class SnmpTest extends TestCase {
-/*	Snmp snmp ; 
+public class SshTest extends TestCase {
+/*	Ssh ssh ; 
 	
 	public static String server ; 
 	public static int port ; 
@@ -20,8 +20,9 @@ public class SnmpTest extends TestCase {
 		   }
 
 		   public void testTelnet() throws UnknownHostException, IOException{
-			   snmp = new Snmp(server,port) ; 
+			   ssh= new Ssh(server,port) ; 
 		     
 		   }*/
+
 
 }

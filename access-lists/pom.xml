@@ -37,6 +37,13 @@
     <version>2.19.1</version>
 </dependency>
 
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-regex</artifactId>
+    <version>3.0.3</version>
+</dependency>
+
+
 	
 		
 

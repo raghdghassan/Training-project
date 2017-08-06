@@ -14,6 +14,9 @@ public class Interface {
 	private String name;
 	private List<PolicyMap> policyMap;
 	private List<AccessList> accessList;
+	private Status status ; 
+	private String mtu ; 
+	private Duplex duplex ;
 
 	public Interface() {
 		super();
@@ -73,6 +76,53 @@ public class Interface {
 	 */
 	public void setAccessList(List<AccessList> accessList) {
 		this.accessList = accessList;
+	}
+
+	/**
+	 * @return the status
+	 */
+	public Status getStatus() {
+		return status;
+	}
+
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	/**
+	 * @return the mtu
+	 */
+	public String getMtu() {
+		return mtu;
+	}
+
+	/**
+	 * @param mtu the mtu to set
+	 */
+	public void setMtu(String mtu) {
+		this.mtu = mtu;
+	}
+
+	/**
+	 * @return the duplex
+	 */
+	public Duplex getDuplex() {
+		return duplex;
+	}
+
+	/**
+	 * @param duplex the duplex to set
+	 */
+	public void setDuplex(Duplex duplex) {
+		this.duplex = duplex;
+	}
+	
+	public String toString () 
+	{
+		return "" ;
 	}
 
 }
