@@ -1,5 +1,5 @@
 #surefire
-#Thu Aug 03 12:47:26 EEST 2017
+#Tue Aug 08 11:31:41 EEST 2017
 enableAssertions=true
 testSuiteDefinitionTestSourceDirectory=C\:\\Users\\exalt\\git\\Training-project\\access-lists\\src\\test\\java
 surefireClassPathUrl.1=C\:\\Users\\exalt\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.12.4\\surefire-api-2.12.4.jar
@@ -20,15 +20,16 @@ runOrder=filesystem
 isTrimStackTrace=true
 reportsDirectory=C\:\\Users\\exalt\\git\\Training-project\\access-lists\\target\\surefire-reports
 includes2=**/*TestCase.java
-tc.2=ConnectionTest.TelnetTest
 includes1=**/*Test.java
-tc.1=ConnectionTest.SshTest
 includes0=**/Test*.java
-tc.0=ConnectionTest.SnmpTest
+tc.0=Testing.TelnetTest
 failIfNoTests=false
 excludes0=**/*$*
 useManifestOnlyJar=true
 testClassesDirectory=C\:\\Users\\exalt\\git\\Training-project\\access-lists\\target\\test-classes
+classPathUrl.18=C\:\\Users\\exalt\\.m2\\repository\\org\\apache\\lucene\\lucene-core\\3.0.3\\lucene-core-3.0.3.jar
+classPathUrl.17=C\:\\Users\\exalt\\.m2\\repository\\jakarta-regexp\\jakarta-regexp\\1.4\\jakarta-regexp-1.4.jar
+classPathUrl.16=C\:\\Users\\exalt\\.m2\\repository\\org\\apache\\lucene\\lucene-regex\\3.0.3\\lucene-regex-3.0.3.jar
 classPathUrl.15=C\:\\Users\\exalt\\.m2\\repository\\org\\bouncycastle\\bcpkix-jdk15on\\1.55\\bcpkix-jdk15on-1.55.jar
 classPathUrl.14=C\:\\Users\\exalt\\.m2\\repository\\org\\bouncycastle\\bcprov-jdk15on\\1.55\\bcprov-jdk15on-1.55.jar
 classPathUrl.13=C\:\\Users\\exalt\\.m2\\repository\\org\\bouncycastle\\bcpg-jdk15on\\1.55\\bcpg-jdk15on-1.55.jar

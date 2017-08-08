@@ -1,6 +1,7 @@
 modelObjects\Interface.class
 modelObjects\AccessList.class
 Connection\Snmp.class
+modelObjects\Duplex.class
 modelObjects\PolicyMap.class
 Connection\Connection.class
 Regex\Regex.class
