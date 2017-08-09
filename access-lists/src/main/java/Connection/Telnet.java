@@ -9,73 +9,94 @@ import java.io.*;
 
 public class Telnet implements Connection {
 	private Socket socket;
-	private InputStream in;
-	private PrintStream out;
-	private TelnetClient telnet;
 
-	public Telnet(String server, int port) throws UnknownHostException, IOException {
-		
-		
-		
+	private String d;
+	private BufferedReader in; // device dialog
+	private String command;
 
-		BufferedReader in = null; // device dialog
+	private PrintWriter out = null; // device output
+	private BufferedReader stdIn = null; // user input commands
+
+	public Telnet(String server, int port, String password) throws UnknownHostException, IOException {
+
 		socket = new Socket(server, port);
-		PrintWriter out = null; // device output
-		BufferedReader stdIn = null;  // user input commands
-		String command = null;
-	
-		//String[]  dialog = new String[]{};
-		
+
 		try {
 			socket.setSoTimeout(20000);
 			out = new PrintWriter(socket.getOutputStream(), true);
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-		//	command = in.readLine();
-		//	command = in.readLine();
+			command = in.readLine();
+			command = in.readLine();
 			stdIn = new BufferedReader(new InputStreamReader(System.in));
 			while (!(command = in.readLine()).contains("User")) {
 				System.out.println(command);
 			}
 			System.out.println(command);
-			System.out.print("Password : ");
-			out.println(stdIn.readLine());
+			
+			out.println(password);
 			command = in.readLine();
-			System.out.print("Command : ");
-			out.println(stdIn.readLine());
+			
+			out.println("en");
 			command = in.readLine();
 			System.out.println(command = in.readLine());
 			if (command.contains(">")) {
-				System.out.print("Password : ");
-				out.println(stdIn.readLine());
-				command = in.readLine();
-				while (true) {
-					out.println("\n");
-					if ((command = in.readLine()).contains("#")) {
-						System.out.print(command);
-						out.println(stdIn.readLine());
-					}
-					while (!(command = in.readLine()).equals("end") && !command.contains("#"))
-						System.out.println(command);
-					System.out.println(command);
-					command = in.readLine();
-					
-					
-				}
+				
+				out.println(password);
 			}
-		/*	System.setOut(new PrintStream(new FileOutputStream("output.txt")));
-			System.out.println("This is test output");*/
-			
+			send();
+			/*
+			 * if (command.contains(">")) { System.out.print("Password : ");
+			 * out.println(stdIn.readLine()); command = in.readLine(); while (true) {
+			 * out.println("\n"); if ((command = in.readLine()).contains("#")) {
+			 * 
+			 * System.out.print(command); out.println(stdIn.readLine()); } while (!(command
+			 * = in.readLine()).equals("end") && !command.contains("#"))
+			 * System.out.println(command); System.out.println(command); command =
+			 * in.readLine();
+			 * 
+			 * 
+			 * 
+			 * }
+			 */
+			// }
+			/*
+			 * System.setOut(new PrintStream(new FileOutputStream("output.txt")));
+			 * System.out.println("This is test output");
+			 */
+
 		} catch (Exception e) {
 			System.exit(1);
 		}
-		// out.close();
-		// in.close();
-		// stdIn.close();
-		// ClientSocket.close();
 
-	//}
-		
+		System.out.println(command);
+		out.close();
+		in.close();
+		stdIn.close();
+
+	}
+
+	public String receive() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void send() throws IOException {
+
+		command = in.readLine();
+		while (true) {
+			out.println("\n");
+			if ((command = in.readLine()).contains("#")) {
+				System.out.print(command);
+				out.println(stdIn.readLine());
+			}
+			while (!(command = in.readLine()).equals("end") && !command.contains("#"))
+				System.out.println(command);
+	
+			System.out.println(command);
+			command = in.readLine();
+
+		}
+
 	}
 
 }
-	
