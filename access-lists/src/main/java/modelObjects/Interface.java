@@ -3,6 +3,7 @@
  */
 package modelObjects;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,25 +20,11 @@ public class Interface {
 	private String status ; 
 	private String mtu ; 
 	private Duplex duplex ;
-	private String duplex1;
+	//private String duplex1;
 
 	
 	
 
-
-	/**
-	 * @return the duplex1
-	 */
-	public String getDuplex1() {
-		return duplex1;
-	}
-
-	/**
-	 * @param duplex1 the duplex1 to set
-	 */
-	public void setDuplex1(String duplex1) {
-		this.duplex1 = duplex1;
-	}
 
 	public Interface() {
 		super();
@@ -48,22 +35,16 @@ public class Interface {
 	 * @param policyMap
 	 * @param number
 	 */
-	public Interface(String name , String status , String mtu,String duplex1  ) {
+	public Interface(String name , String status , String mtu,Duplex duplex  ) {
 		super();
 		this.name = name;
 		this.status=status;
 		this.mtu=mtu ; 
-		this.duplex1=duplex1;
+		this.duplex=duplex;
 				
 		
 	}
 	
-	
-	public Interface(String name, List<PolicyMap> policyMap, String number) {
-		super();
-		this.name = name;
-		this.policyMap = policyMap;
-	}
 
 	/**
 	 * @return the name
@@ -158,10 +139,11 @@ public class Interface {
 	
 	public String toString () 
 	{
-		return "name: "+ name+"\n"+"Duplex :" +duplex1+"\n"+"mtu : "+mtu+"\n"+"Status :" + status ;
+		return "name: "+ name+"\n"+"Duplex :" +duplex+"\n"+"mtu : "+mtu+"\n"+"Status :" + status ;
 	}
 	
 	public void addInterface(Interface interface1) {
+		
 		interface1.addInterface(interface1);
 	}
 

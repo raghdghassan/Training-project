@@ -9,12 +9,12 @@ public class Snmp implements Connection{
 		// TODO Auto-generated constructor stub
 	}
 
-	public String receive() {
+	public String receive()throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public void send()  throws IOException{
+	public void send(String s)  throws IOException{
 		// TODO Auto-generated method stub
 		
 	}
